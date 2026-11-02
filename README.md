@@ -1,5 +1,9 @@
+<img width="2455" height="1651" alt="Image" src="https://github.com/user-attachments/assets/0a2e96c1-9acf-45d2-8c58-4bfa0c193556" />  
+
+
 # To Do List
 Autora: Fabiola Leal, estudiante de Ingeniería en Informática.
+---
 Aplicación móvil de gestión de tareas pendientes desarrollada con **React Native**, **Expo** y **TypeScript**. Permite registrar, visualizar, editar y eliminar tareas, cada una con un título y una descripción.
 
 Proyecto desarrollado para la **Evaluación Sumativa Unidad N.º 1** de la asignatura *Desarrollo de Aplicaciones Móviles* (Instituto Profesional San Sebastián). Es la base sobre la que se construirán las funcionalidades de las siguientes unidades: almacenamiento local, autenticación de usuarios y consumo de APIs externas.
@@ -22,7 +26,7 @@ Proyecto desarrollado para la **Evaluación Sumativa Unidad N.º 1** de la asign
 12. [Nota sobre el framework](#nota-sobre-el-framework)
 13. [Solución de problemas](#solución-de-problemas)
 14. [Evolución del proyecto](#evolución-del-proyecto)
-15. [Licencia](#licencia)
+15. [Evidencias](#evidencias)
 
 ---
 
@@ -308,6 +312,36 @@ El enunciado original de la evaluación está planteado con Ionic (`ion-header`,
 | Docker no inicia por falta de `HOST_IP` | Copia `.env.example` como `.env` y define la IP local de tu equipo |
 | Cambios de dependencias no se reflejan en Docker | Ejecuta `docker compose down -v && docker compose up --build` |
 | Caché de Metro desactualizada | Ejecuta `npx expo start --clear` |
+
+---
+## Evidencias
+Vista de tareas:  
+
+<img width="532" height="767" alt="Image" src="https://github.com/user-attachments/assets/1710af1f-8bb1-4100-9b8b-88626682c466" />
+
+Validación del formulario de una nueva tarea:  
+
+<img width="534" height="775" alt="Image" src="https://github.com/user-attachments/assets/503b0544-e330-4619-9664-da22fae6e403" />
+
+Nueva tarea:  
+
+<img width="534" height="775" alt="Image" src="https://github.com/user-attachments/assets/3ae4a5be-a0df-4ac5-9a5e-c957947eb48b" />
+
+Vista de tareas con la nueva tarea creada:  
+
+<img width="534" height="775" alt="Image" src="https://github.com/user-attachments/assets/1ca15f4a-3103-48aa-a9ac-f326c5fb619e" />
+
+Editar tarea:  
+
+<img width="537" height="777" alt="Image" src="https://github.com/user-attachments/assets/dd904cdd-2594-41db-b829-ac1b7fa2db07" />
+
+Vista de tareas luego de la actualización:  
+
+<img width="537" height="777" alt="Image" src="https://github.com/user-attachments/assets/9b53657f-a75c-4f60-b01b-4c841dd3d3cc" />
+
+Eliminación de tarea:  
+
+<img width="537" height="777" alt="Image" src="https://github.com/user-attachments/assets/b37c65c1-4f84-4f3b-a081-0ec714579605" />
 
 ---
 

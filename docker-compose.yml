@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8081:8081"
+    environment:
+      # IP de tu equipo en la red local. Define HOST_IP en el archivo .env
+      - REACT_NATIVE_PACKAGER_HOSTNAME=${HOST_IP:?Define HOST_IP en el archivo .env (copia .env.example)}
+    volumes:
+      - .:/app              # recarga en caliente al editar el código
+      - /app/node_modules   # conserva las dependencias instaladas en la imagen
+    stdin_open: true
+    tty: true

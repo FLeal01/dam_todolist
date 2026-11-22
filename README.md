@@ -690,62 +690,69 @@ Eliminación de tarea:
 
 ### Parte 2 — Versión 2.0
 
-Capturas de la **versión 2.0** (tema oscuro). Reemplaza cada línea `> Pegar imagen aquí` por la captura correspondiente.
+Capturas de la **versión 2.0** (tema oscuro). 
 
 **Cuentas y sesión**
 
 Inicio de sesión:  
-> 
+> <img width="828" height="1792" alt="IMG_7153" src="https://github.com/user-attachments/assets/da983ea9-1efa-4269-a72d-519dd618e0c2" />
 
 Registro con la lista de requisitos de contraseña en tiempo real:  
-> 
+> <img width="828" height="1792" alt="IMG_7142" src="https://github.com/user-attachments/assets/6f87a84a-7022-4c28-9f8f-6c0467fffcf9" />
+> <img width="828" height="1792" alt="IMG_7131" src="https://github.com/user-attachments/assets/16849599-d71a-44d5-ab71-c96fde84cb76" />
 
 Credenciales incorrectas (mensaje único):  
-> 
+> <img width="828" height="1792" alt="fail" src="https://github.com/user-attachments/assets/8574a330-5665-42b2-b062-1d0721c9a74f" />
 
 **Tareas**
 
 Lista de tareas del usuario con resumen, temporizador y estado de sincronización:  
-> 
+> <img width="828" height="1792" alt="Lista de tareas del usuario con resumen" src="https://github.com/user-attachments/assets/88624243-d5b3-4145-b28d-a1e9dc8e86be" />
+
+> <img width="828" height="1792" alt="lista de tareas" src="https://github.com/user-attachments/assets/2d01c4de-d366-40c0-a64a-8552312e3ab5" />
+
 
 Formulario de nueva tarea con fecha límite, foto y GPS:  
-> 
+> <img width="828" height="1792" alt="Formulario de nueva tarea" src="https://github.com/user-attachments/assets/866db514-9cff-414e-9dab-16b10cb82531" />
+> <img width="828" height="1792" alt="Formulario de nueva tarea (2)" src="https://github.com/user-attachments/assets/f33a9fc9-4784-4c1f-9454-ce44d1d2af09" />
+
+Editar tarea:
+> <img width="828" height="1792" alt="Editar_tarea" src="https://github.com/user-attachments/assets/3277c6a7-bbbe-4c05-80cf-88d1f3fd601b" />
 
 Tarea con foto y coordenadas en la lista:  
-> 
+> <img width="828" height="1792" alt="IMG_7146" src="https://github.com/user-attachments/assets/43e5edd0-1ad6-4137-91f6-b725acfb8629" />
 
-Estados del temporizador (normal, urgente, expirada, completada):  
-> 
+Estados del temporizador:  
+> <img width="828" height="1792" alt="IMG_7128" src="https://github.com/user-attachments/assets/aec86592-0e64-4e6f-b224-1d7b78392226" />
 
-Aislamiento por usuario (dos cuentas, listas distintas):  
-> 
 
 **Periféricos y permisos**
 
 Solicitud de permiso de cámara:  
-> 
+> <img width="828" height="1792" alt="Acceso_camara" src="https://github.com/user-attachments/assets/ab354908-013c-4135-9f5a-66f5c5a5f692" />
 
-Permiso denegado: mensaje visible y la tarea se puede guardar sin foto:  
-> 
+Permiso denegado: Tareas guardadas sin foto:  
+> <img width="828" height="1792" alt="IMG_7148" src="https://github.com/user-attachments/assets/9afd1f0a-f43a-4d1f-8a06-e47fef026667" />
 
 Solicitud de permiso de ubicación y GPS obtenido:  
-> 
+> <img width="828" height="1792" alt="Solicitud de permiso de ubicación y GPS obtenido" src="https://github.com/user-attachments/assets/2af53506-60b0-463c-89e4-45b4c1d93dfe" />
 
 **Servicios web**
 
 Importación desde la API externa:  
-> 
+> <img width="828" height="1792" alt="Importación desde la API externa" src="https://github.com/user-attachments/assets/39c86c7a-9794-42ac-8fc2-da9126abd8b7" />
 
 Sincronización completa:  
-> 
+> <img width="828" height="1792" alt="Antes_de_sincronizar" src="https://github.com/user-attachments/assets/348d523f-f633-46b1-8774-59e20e920401" />
+<img width="828" height="1792" alt="Sincronización completa" src="https://github.com/user-attachments/assets/7ad48ad4-3848-4589-bbbf-9dab6dbfc226" />
 
 **Pruebas y comprobación de tipos**
 
 Resultado de `npm test` (5 suites, 11 pruebas aprobadas):  
-> 
+> <img width="1027" height="618" alt="Tests" src="https://github.com/user-attachments/assets/b74370e4-4dbe-43f3-80f9-9832bbad627b" />
 
 Resultado de `npm run typecheck` sin errores:  
-> 
+> <img width="585" height="87" alt="typecheck" src="https://github.com/user-attachments/assets/634bb500-03f8-4844-a22d-3dd7be85b4c8" />
 
 ---
 

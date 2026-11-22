@@ -23,6 +23,7 @@ describe('Periféricos nativos y permisos (I2 Cámara e I3 GPS)', () => {
   test('I2: solicita permiso de cámara y devuelve error si el usuario lo deniega', async () => {
     (ImagePicker.requestCameraPermissionsAsync as jest.Mock).mockResolvedValueOnce({
       granted: false,
+      canAskAgain: false,
     } as never);
 
     const res = await captureTaskPhoto();
@@ -32,9 +33,9 @@ describe('Periféricos nativos y permisos (I2 Cámara e I3 GPS)', () => {
     expect(res).toEqual({
       ok: false,
       error: 'Se necesita permiso de cámara para adjuntar una foto.',
+      canAskAgain: false,
     });
   });
-
   test('I2: abre la cámara y devuelve la URI de la imagen cuando el permiso es concedido', async () => {
     (ImagePicker.requestCameraPermissionsAsync as jest.Mock).mockResolvedValueOnce({
       granted: true,
@@ -57,6 +58,7 @@ describe('Periféricos nativos y permisos (I2 Cámara e I3 GPS)', () => {
   test('I3: solicita permiso de ubicación y devuelve error si el estado no es granted', async () => {
     (Location.requestForegroundPermissionsAsync as jest.Mock).mockResolvedValueOnce({
       status: 'denied',
+      canAskAgain: false,
     } as never);
 
     const res = await captureCurrentLocation();
@@ -66,6 +68,7 @@ describe('Periféricos nativos y permisos (I2 Cámara e I3 GPS)', () => {
     expect(res).toEqual({
       ok: false,
       error: 'Se necesita permiso de ubicación para registrar el GPS.',
+      canAskAgain: false,
     });
   });
 

@@ -1,7 +1,9 @@
 import { useMemo, useRef, useState, type ComponentRef } from 'react';
 import {
+  Alert,
   Image,
   KeyboardAvoidingView,
+  Linking,
   Platform,
   Pressable,
   ScrollView,
@@ -97,11 +99,29 @@ export default function TaskFormScreen({ navigation, route }: Props) {
 
   const onlyDigits = (val: string, maxLen: number) => val.replace(/\D/g, '').slice(0, maxLen);
 
+  const promptOpenSettings = (message: string) => {
+    setPeripheralError(message);
+    if (Platform.OS !== 'web') {
+      Alert.alert(
+        'Permiso bloqueado',
+        `${message} Actívalo en la configuración del dispositivo para continuar.`,
+        [
+          { text: 'Cancelar', style: 'cancel' },
+          { text: 'Abrir Ajustes', onPress: () => void Linking.openSettings() },
+        ]
+      );
+    }
+  };
+
   const handleTakePhoto = async () => {
     setPeripheralError(null);
     const res = await captureTaskPhoto();
     if (!res.ok) {
-      setPeripheralError(res.error);
+      if (res.canAskAgain === false) {
+        promptOpenSettings(res.error);
+      } else {
+        setPeripheralError(res.error);
+      }
       return;
     }
     if (res.uri) {
@@ -114,7 +134,11 @@ export default function TaskFormScreen({ navigation, route }: Props) {
     setLocating(true);
     const res = await captureCurrentLocation();
     if (!res.ok) {
-      setPeripheralError(res.error);
+      if (res.canAskAgain === false) {
+        promptOpenSettings(res.error);
+      } else {
+        setPeripheralError(res.error);
+      }
     } else {
       setLocation(res.location);
     }

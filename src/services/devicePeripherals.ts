@@ -4,17 +4,21 @@ import type { TaskLocation } from '../types/task';
 
 export type CameraCaptureResult =
   | { ok: true; uri?: string }
-  | { ok: false; error: string };
+  | { ok: false; error: string; canAskAgain?: boolean };
 
 export type LocationCaptureResult =
   | { ok: true; location: TaskLocation }
-  | { ok: false; error: string };
+  | { ok: false; error: string; canAskAgain?: boolean };
 
 export async function captureTaskPhoto(): Promise<CameraCaptureResult> {
   try {
     const permission = await ImagePicker.requestCameraPermissionsAsync();
     if (!permission.granted) {
-      return { ok: false, error: 'Se necesita permiso de cámara para adjuntar una foto.' };
+      return {
+        ok: false,
+        error: 'Se necesita permiso de cámara para adjuntar una foto.',
+        canAskAgain: permission.canAskAgain,
+      };
     }
 
     const result = await ImagePicker.launchCameraAsync({
@@ -35,9 +39,13 @@ export async function captureTaskPhoto(): Promise<CameraCaptureResult> {
 
 export async function captureCurrentLocation(): Promise<LocationCaptureResult> {
   try {
-    const { status } = await Location.requestForegroundPermissionsAsync();
-    if (status !== 'granted') {
-      return { ok: false, error: 'Se necesita permiso de ubicación para registrar el GPS.' };
+    const permission = await Location.requestForegroundPermissionsAsync();
+    if (permission.status !== 'granted') {
+      return {
+        ok: false,
+        error: 'Se necesita permiso de ubicación para registrar el GPS.',
+        canAskAgain: permission.canAskAgain,
+      };
     }
 
     const position = await Location.getCurrentPositionAsync({

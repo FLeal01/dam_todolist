@@ -10,7 +10,12 @@ export function createMemoryTaskRepository(initial: Task[] = []): TaskRepository
       return [...items];
     },
     async create(data: NewTask) {
-      const task: Task = { id: createId(), ...data };
+      const task: Task = {
+        ...data,
+        id: createId(),
+        completed: data.completed ?? false,
+        createdAt: data.createdAt ?? new Date().toISOString(),
+      };
       items = [task, ...items];
       return task;
     },
